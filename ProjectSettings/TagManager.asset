@@ -14,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - ground
   - 
   - 
   - 
@@ -39,6 +39,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: baground
+    uniqueID: 2281315037
+    locked: 0
+  - name: ground
+    uniqueID: 3328560731
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: player
+    uniqueID: 56555981
     locked: 0
