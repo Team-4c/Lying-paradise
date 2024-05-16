@@ -7,38 +7,48 @@ public class Ladder1 : MonoBehaviour
     [SerializeField]
 
     float speed = 5;
-
+    private bool flag;
 
     void Start()
     {
    
     }
 
-     void OnTriggerStay2D(Collider2D other)
+     void OnCollisionEnter2D(Collision2D other)
     {
 
-        other.GetComponent<Rigidbody2D>().gravityScale = 0;
+        if (other.gameObject.CompareTag("ladder"))
+        {
+            flag = true;
+        }
 
-        if (other.gameObject.CompareTag("Player"))
-        {
-            if (Input.GetKey(KeyCode.W))
-            {
-                other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, speed);
 
-            }
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -speed);
-        }
-        else
-        {
-            other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-        }
+
 
     }
     void OnTriggerExit2D(Collider2D other)
     {
         other.GetComponent<Rigidbody2D>().gravityScale = 1;
+    }
+    private void Update()
+    {
+        if (flag)
+        {
+            if (Input.GetButton("Up"))
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(0, speed);
+
+            }
+            else if (Input.GetButton("Down"))
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(0, -speed);
+            }
+            else
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            }
+        }
+        
+        flag = false;
     }
 }
