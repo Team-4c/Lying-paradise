@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour {
 	bool _jump = false;
 	bool _crouch = false;
 
+	private bool _air;
+
 	private Animator _anim;
 
 	public bool crouch = true;
@@ -25,13 +27,20 @@ public class PlayerMovement : MonoBehaviour {
 
 	void Update () {
 
-		_horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed; 
-		_anim.SetFloat("Blend", _horizontalMove);
-
+		_horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 		if (Input.GetButtonDown("Jump"))
 		{
 			_jump = true;
-			_anim.SetBool("jump", true);
+		}
+
+		if (_horizontalMove != 0)
+		{
+			_anim.Play("run");
+		}
+
+		if (_horizontalMove == 0)
+		{
+			_anim.Play("idle");
 		}
 
 		if (crouch != false)
@@ -45,7 +54,6 @@ public class PlayerMovement : MonoBehaviour {
 				_crouch = false;
 			}
 		}
-		_anim.SetBool("jump", _jump);
 	}
 	
 
@@ -54,9 +62,5 @@ public class PlayerMovement : MonoBehaviour {
 		// Move our character
 		controller.Move(_horizontalMove * Time.fixedDeltaTime, _crouch, _jump);
 		_jump = false;
-		if (controller.mGrounded)
-		{
-			_jump = false;
-		}
 	}
 }

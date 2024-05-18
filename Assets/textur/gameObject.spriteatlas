@@ -37,6 +37,7 @@ SpriteAtlas:
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: afff450070bc30347b171f53fa6c608e, type: 3}
   - {fileID: 21300000, guid: ff8408007b41bb04393cc5740a3a0df6, type: 3}
   - {fileID: 21300000, guid: a347e1301d2771b4d97d8513ab05d4b5, type: 3}
   - {fileID: 21300000, guid: 4aade840906080944a099d2172a0da89, type: 3}
@@ -130,6 +131,12 @@ SpriteAtlas:
   - {fileID: 21300000, guid: c26428c3ebf971144bbcc7844924740a, type: 3}
   - {fileID: 21300000, guid: 54f8f9c33078e9b418f33d2971beecef, type: 3}
   - {fileID: 21300000, guid: ec4a2ec376d8a61419be280db73afd5a, type: 3}
+  - {fileID: 5670732621190257608, guid: fb6f84d3ec54eaa41b47d02bce7fdf4e, type: 3}
+  - {fileID: 2429705866556353255, guid: fb6f84d3ec54eaa41b47d02bce7fdf4e, type: 3}
+  - {fileID: -8490346600704463052, guid: fb6f84d3ec54eaa41b47d02bce7fdf4e, type: 3}
+  - {fileID: -2552588362852645552, guid: fb6f84d3ec54eaa41b47d02bce7fdf4e, type: 3}
+  - {fileID: -1282214387447324998, guid: fb6f84d3ec54eaa41b47d02bce7fdf4e, type: 3}
+  - {fileID: -3827101018466894660, guid: fb6f84d3ec54eaa41b47d02bce7fdf4e, type: 3}
   - {fileID: 21300000, guid: 31fd78d35468b8f47ad1bd45f5d4d866, type: 3}
   - {fileID: 21300000, guid: 131ed4e316b3f914296f2986faefd53e, type: 3}
   - {fileID: 21300000, guid: 7d4b99f3b6625654ca20dddbea67a041, type: 3}
@@ -573,6 +580,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 1bdba2ff04281f041b1fb67da3d706b9, type: 3}
   - {fileID: 21300000, guid: 5b3306ff7b8d51a42912d12e869e5f56, type: 3}
   m_PackedSpriteNamesToIndex:
+  - a
   - IndustrialTile_57
   - Tile_15
   - Walk
@@ -666,6 +674,12 @@ SpriteAtlas:
   - IndustrialTile_48
   - Tile_74
   - Tile_18
+  - Money_0
+  - Money_1
+  - Money_2
+  - Money_3
+  - Money_4
+  - Money_5
   - 19
   - 18
   - Tile_11

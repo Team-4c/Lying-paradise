@@ -11,7 +11,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/positon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Hammer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@1.2.1/Rider/Editor/EditorPluginInterop.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Lift.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.17/Editor/Editors/CinemachineVirtualCameraEditor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -21,7 +24,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@1.2.1/Rider/Editor/EditorPluginInterop.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/CharacterController2D.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlatformerCookbook/Scripts/CollectableItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlatformerCookbook/Scripts/InteractiveButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlatformerCookbook/Scripts/FloatingPlatform.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LadderClimb.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/lift.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Lift.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/positon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Spawn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Hammer.cs" />
       </list>
     </option>
   </component>
@@ -72,6 +85,10 @@
       <option name="presentableId" value="Default" />
       <updated>1715865944859</updated>
       <workItem from="1715866000894" duration="3461000" />
+      <workItem from="1715916328324" duration="1251000" />
+      <workItem from="1715946066716" duration="5077000" />
+      <workItem from="1715956995558" duration="577000" />
+      <workItem from="1716033816270" duration="6155000" />
     </task>
     <servers />
   </component>
