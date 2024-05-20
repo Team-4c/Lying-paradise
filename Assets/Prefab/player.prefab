@@ -215,6 +215,7 @@ MonoBehaviour:
   controller: {fileID: 6829097509366799650}
   runSpeed: 20
   crouch: 0
+  pos: {fileID: 11400000, guid: 9fb48b476b3794a4b8835df2ed627380, type: 2}
 --- !u!50 &6829097509366799648
 Rigidbody2D:
   serializedVersion: 4

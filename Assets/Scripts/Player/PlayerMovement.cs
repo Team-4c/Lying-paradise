@@ -20,9 +20,13 @@ public class PlayerMovement : MonoBehaviour {
 
 	public bool crouch = true;
 
+	public positon pos;
+
 	private void Start()
 	{
 		_anim = GetComponentInChildren<Animator>();
+
+		pos.position = transform.position;
 	}
 
 	void Update () {
