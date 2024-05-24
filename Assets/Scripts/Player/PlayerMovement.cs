@@ -1,70 +1,111 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
-
-	public CharacterController2D controller;
-
-	public float runSpeed = 40f;
-
-	float _horizontalMove = 0f;
-	bool _jump = false;
-	bool _crouch = false;
-
-	private bool _air;
-
-	private Animator _anim;
-
-	public bool crouch = true;
-
-	public positon pos;
-
-	private void Start()
+namespace Player
+{
+	public class PlayerMovement : MonoBehaviour
 	{
-		_anim = GetComponentInChildren<Animator>();
 
-		pos.position = transform.position;
-	}
+		public float IdleSensitivity = 0.01f;
+		
+		public CharacterController2D controller;
 
-	void Update () {
+		public float runSpeed = 40f;
 
-		_horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-		if (Input.GetButtonDown("Jump"))
+		float _horizontalMove = 0f;
+		bool _jump = false;
+		bool _crouch = false;
+
+		private bool _climb;
+		public LayerMask loadder;
+		public Transform climbCheck;
+		private float _climbRadius = .2f;
+
+		private bool _air;
+
+		private Animator _anim;
+
+		public bool crouch = true;
+
+		public positon pos;
+
+		private void Start()
 		{
-			_jump = true;
+			_anim = GetComponentInChildren<Animator>();
+
+			pos.position = transform.position;
 		}
 
-		if (_horizontalMove != 0)
-		{
-			_anim.Play("run");
-		}
+		void Update () {
 
-		if (_horizontalMove == 0)
-		{
-			_anim.Play("idle");
-		}
-
-		if (crouch != false)
-		{
-			if (Input.GetButtonDown("Crouch"))
+			_horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+			if (Input.GetButtonDown("Jump"))
 			{
-				_crouch = true;
+				_jump = true;
 			}
-			else if (Input.GetButtonUp("Crouch"))
+
+			if (controller.mGrounded && !_climb)
 			{
-				_crouch = false;
+				
+				if (Mathf.Abs(_horizontalMove) > IdleSensitivity)
+				{
+					_anim.Play("run");
+				}
+				else _anim.Play("idle");
+			}
+			if (!controller.mGrounded)
+			{
+				if (_climb != true)
+				{
+					_anim.Play("jump");
+				}
+				
+				if (Physics2D.OverlapCircle(climbCheck.position, _climbRadius, loadder))
+				{
+					if (Input.GetButton("Vertical"))
+					{
+						_climb = true;
+						_anim.Play("climb");
+					}
+					else
+					{
+						_anim.Play("climbIdle");
+					}
+				}
+				else
+				{
+					_climb = false;
+				}
+			}
+
+			
+			
+			
+			
+			if (crouch != false)
+			{
+				if (Input.GetButtonDown("Crouch"))
+				{
+					_crouch = true;
+				}
+				else if (Input.GetButtonUp("Crouch"))
+				{
+					_crouch = false;
+				}
+			}
+
+			if (Physics2D.OverlapCircle(controller.m_GroundCheck.position, controller.k_GroundedRadius, loadder))
+			{
+				_anim.Play("climb");
 			}
 		}
-	}
 	
 
-	void FixedUpdate ()
-	{
-		// Move our character
-		controller.Move(_horizontalMove * Time.fixedDeltaTime, _crouch, _jump);
-		_jump = false;
+		void FixedUpdate ()
+		{
+			// Move our character
+			controller.Move(_horizontalMove * Time.fixedDeltaTime, _crouch, _jump);
+			_jump = false;
+			
+		}
 	}
 }
