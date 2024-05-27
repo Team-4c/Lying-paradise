@@ -8,14 +8,14 @@ public class Pause : MonoBehaviour
     public void LoadNextLevel()
     {
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        var newSceneIndex = currentSceneIndex + 1;
+        var newSceneIndex = currentSceneIndex + 2;
         PlayerPrefs.SetInt("currentLevel", newSceneIndex);
         SceneManager.LoadScene(newSceneIndex);
     }
     public void LoadCurrentLevel()
     {
         var currentLevel = PlayerPrefs.GetInt("currentLevel");
-        SceneManager.LoadScene(currentLevel);
+        SceneManager.LoadScene("exclusion-zone");
     }
     public void BackToMainMenu()
     {
