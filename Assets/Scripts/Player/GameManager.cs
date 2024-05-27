@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("exclusion-zone");
     }
-
+   
 }

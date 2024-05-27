@@ -172,6 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6829097509366799653}
   - component: {fileID: 6829097509366799650}
+  - component: {fileID: 238289192746424262}
   - component: {fileID: 6829097509366799651}
   - component: {fileID: 6829097509366799648}
   - component: {fileID: 6829097509366799649}
@@ -232,6 +233,18 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &238289192746424262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6829097509366799679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eaeab167604dc34f96cf349e25246ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6829097509366799651
 MonoBehaviour:
   m_ObjectHideFlags: 0
