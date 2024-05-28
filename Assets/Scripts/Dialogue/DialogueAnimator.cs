@@ -9,7 +9,10 @@ public class DialogueAnimator : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        startAnim.SetBool("startOpen", true);
+        if (other.CompareTag("Player"))
+        {
+            startAnim.SetBool("startOpen", true);
+        }
     }
     public void OnTriggerExit2D(Collider2D other)
     {

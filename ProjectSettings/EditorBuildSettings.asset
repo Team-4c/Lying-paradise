@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/New game.unity
     guid: ec9675f356c8f0a4dbf996ffc65e45ff
   - enabled: 1
-    path: Assets/Scenes/Lvl1.unity
-    guid: 68bb29752f4d00343be97a65e5cb1da2
+    path: Assets/Scenes/exclusion-zone.unity
+    guid: ec0f175e509e2a748ac43e5fd6f1d727
   - enabled: 1
     path: Assets/Scenes/Pause.unity
     guid: a014ed67c0e61a5409aa3ef59e937da3

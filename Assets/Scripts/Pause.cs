@@ -15,7 +15,7 @@ public class Pause : MonoBehaviour
     public void LoadCurrentLevel()
     {
         var currentLevel = PlayerPrefs.GetInt("currentLevel");
-        SceneManager.LoadScene("Lvl1");
+        SceneManager.LoadScene("exclusion-zone");
     }
     public void BackToMainMenu()
     {
